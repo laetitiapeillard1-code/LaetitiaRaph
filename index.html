@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Laetitia & Raph</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,600;1,400&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>💗</text></svg>" />
+</head>
+<body>
+  <header class="header">
+    <a class="logo" href="#accueil" data-tab="accueil">L <span>&hearts;</span> R</a>
+    <nav class="tabs" role="tablist">
+      <button class="tab active" data-tab="accueil" role="tab">Nous</button>
+      <button class="tab" data-tab="newyork" role="tab">New York</button>
+      <button class="tab" data-tab="jetaime" role="tab">Je t'aime</button>
+    </nav>
+  </header>
+
+  <main>
+    <!-- ============ ACCUEIL / COMPTEUR ============ -->
+    <section id="tab-accueil" class="panel active">
+      <div class="hero">
+        <p class="eyebrow">Depuis le 30 mars 2021</p>
+        <h1>Laetitia <em>&amp;</em> Raph</h1>
+        <p class="subtitle">Ensemble depuis…</p>
+
+        <div class="counter">
+          <div class="unit"><span id="c-years">0</span><small>ans</small></div>
+          <div class="unit"><span id="c-months">0</span><small>mois</small></div>
+          <div class="unit"><span id="c-days">0</span><small>jours</small></div>
+          <div class="unit"><span id="c-hours">0</span><small>heures</small></div>
+          <div class="unit"><span id="c-minutes">0</span><small>minutes</small></div>
+          <div class="unit"><span id="c-seconds">0</span><small>secondes</small></div>
+        </div>
+
+        <div class="stats">
+          <div><strong id="s-days">0</strong><span>jours ensemble</span></div>
+          <div><strong id="s-weeks">0</strong><span>semaines</span></div>
+          <div><strong id="s-next">0</strong><span id="s-next-label">jours avant notre anniversaire</span></div>
+        </div>
+      </div>
+
+      <div class="polaroids">
+        <figure class="polaroid p1"><img src="photos/let-damour.jpg" alt="Laetitia et Raph, bisou sur la joue" loading="lazy" /><figcaption>Let d'amour</figcaption></figure>
+        <figure class="polaroid p2"><img src="photos/plage.jpg" alt="Laetitia et Raph à la plage" loading="lazy" /><figcaption>Coucher de soleil</figcaption></figure>
+        <figure class="polaroid p3"><img src="photos/grimaces.jpg" alt="Laetitia et Raph font des grimaces" loading="lazy" /><figcaption>Nos têtes</figcaption></figure>
+      </div>
+    </section>
+
+    <!-- ============ NEW YORK ============ -->
+    <section id="tab-newyork" class="panel">
+      <div class="section-head">
+        <p class="eyebrow">Notre prochain voyage</p>
+        <h2>New York <em>City</em></h2>
+        <p class="subtitle">Nos idées d'activités — cochez ce qui vous tente et ce que vous avez fait.</p>
+      </div>
+
+      <div class="trip-bar">
+        <label class="trip-date">
+          <span>Date de départ</span>
+          <input type="date" id="trip-date" />
+        </label>
+        <div class="trip-countdown" id="trip-countdown">Choisissez une date ✈️</div>
+        <div class="trip-progress">
+          <div class="progress-label"><span id="progress-text">0 / 0 choisies</span></div>
+          <div class="progress"><div class="progress-fill" id="progress-fill"></div></div>
+        </div>
+      </div>
+
+      <div class="filters" id="filters"></div>
+      <div class="activities" id="activities"></div>
+
+      <div class="section-head small">
+        <h3>Une idée de programme</h3>
+      </div>
+      <div class="itinerary" id="itinerary"></div>
+
+      <div class="notes-card">
+        <h3>Nos notes</h3>
+        <textarea id="trip-notes" placeholder="Hôtel, vols, restos réservés, idées en vrac…"></textarea>
+        <p class="hint">Enregistré automatiquement sur cet appareil.</p>
+      </div>
+    </section>
+
+    <!-- ============ JE T'AIME ============ -->
+    <section id="tab-jetaime" class="panel">
+      <div class="section-head">
+        <p class="eyebrow">Dans toutes les langues</p>
+        <h2>Je t'<em>aime</em></h2>
+        <p class="subtitle">Touchez un cœur pour découvrir la langue.</p>
+      </div>
+      <div class="love-grid" id="love-grid"></div>
+    </section>
+  </main>
+
+  <footer class="footer">Laetitia <span>&hearts;</span> Raph · depuis 2021</footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
